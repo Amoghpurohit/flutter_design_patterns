@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 
 abstract class PlatformButton{
   Widget build(VoidCallback onPressed, Widget child);
-  factory PlatformButton(TargetPlatform platform){
+  factory PlatformButton(TargetPlatform platform){    //A factory constructor is a special type of constructor that doesn’t always create a new instance of a class but can 
+    //return an existing instance or a subclass instance.
     switch(platform){
       case TargetPlatform.android:
       return AndroidButton();
