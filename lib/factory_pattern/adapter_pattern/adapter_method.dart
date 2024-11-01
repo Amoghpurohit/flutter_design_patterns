@@ -93,7 +93,7 @@ class PostYTApi implements IPostAPI {
 
     final ytresp = ytData.apiResFromYT();
 
-    final decodedYTResp = jsonDecode(ytresp) as List;
+    final decodedYTResp = jsonDecode(ytresp) as List;      //always know the response structure as it will help us to typecast it 
 
     return decodedYTResp.map((e) => Posts(title: e['title'], bio: e['description'])).toList();
 

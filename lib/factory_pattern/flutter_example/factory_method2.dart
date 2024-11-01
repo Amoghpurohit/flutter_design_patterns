@@ -45,7 +45,7 @@ class IOSIndicator implements PlatformIndicator{
 }
 
 class FactoryMethodForPlatformIndicator{
-  static PlatformIndicator getPlatformIndicator(TargetPlatform platform){
+  static PlatformIndicator getPlatformIndicator(TargetPlatform platform){        // another way of defining factory methods, the actual return types by returning the class implmentation 
     switch(platform){
       case TargetPlatform.android:
       return AndroidIndicator();
